@@ -1,0 +1,8 @@
+
+
+spring:
+  datasource:
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/xdb
+    username: x
+    password: s123455

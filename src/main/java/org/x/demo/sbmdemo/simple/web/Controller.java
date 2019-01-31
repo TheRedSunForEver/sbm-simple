@@ -1,6 +1,7 @@
 package org.x.demo.sbmdemo.simple.web;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.x.demo.sbmdemo.simple.mapper.UserMapper;
@@ -15,8 +16,8 @@ public class Controller {
         return "SpringBoot MyBatis Simple Demo";
     }
 
-    @RequestMapping("/user/")
-    public Object findUserById() {
-        return userMapper.findById(1l);
+    @RequestMapping("/user/{id}")
+    public Object findUserById(@PathVariable Long id) {
+        return userMapper.findById(id);
     }
 }
